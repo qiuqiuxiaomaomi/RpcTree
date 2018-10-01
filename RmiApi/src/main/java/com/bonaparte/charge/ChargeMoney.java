@@ -1,0 +1,8 @@
+package com.bonaparte.charge;
+
+/**
+ * Created by yangmingquan on 2018/10/1.
+ */
+public interface ChargeMoney {
+    public double getChargeMoneyById(Integer uid);
+}
