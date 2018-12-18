@@ -2,6 +2,16 @@
 Thrift, Hessian,RMI
 
 <pre>
+常用的RPC框架：
+
+      1）Dubbo
+      2) Webservice
+      3) RMI
+      5) Hessian
+      6) Thrift
+</pre>
+
+<pre>
 RCP vs HTTP
       RPC基于TCP/IP协议；
       HTTP服务是基于HTTP协议的；
