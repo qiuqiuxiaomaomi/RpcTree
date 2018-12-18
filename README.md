@@ -60,6 +60,15 @@ RPC调用流程
          Consul
 </pre>
 
+###RMI
+
+服务器端
+
+![](https://i.imgur.com/hdeTA7P.png)
+
+客户端
+![](https://i.imgur.com/lD8hyNt.png)
+
 <pre>
 RPC与RMI的区别
 
