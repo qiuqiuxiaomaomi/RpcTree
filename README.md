@@ -8,7 +8,46 @@ Thrift, Hessian,RMI
       2) Webservice
       3) RMI
       5) Hessian
+         1.默认支持跨语言
+         2.较慢
       6) Thrift
+         Thrift源于faceBook
+         1.Thrift支持多种语言（C++,C#,Cocoa,Erlag,Haskell,java,Ocami,Perl,PHP,Python,Ruby,
+           和SmallTalk）
+         2.Thrift适用了组建大型数据交换及存储工具，对于大型系统中的内部数据传输，相对于Json和xml在
+           性能上和传输大小上都有明显的优势。
+         3.Thrift支持三种比较典型的编码方式。（通用二进制编码，压缩二进制编码，优化的可选字段压缩编解码）
+      7）Protobuf
+         Protobuf是google开源的项目，全称 Google Protocol Buffers
+         1.结构化数据存储格式（xml,json等）
+         2.高性能编解码技术
+         3.语言和平台无关，扩展性好
+         4.支持java,C++,Python三种语言。
+</pre>
+
+<pre>
+Java序列化的缺点
+
+      Java自己提供序列化而且用起来也非常简单，但是在远程服务调用中很少用它，主要存在以下
+      缺点。
+         1）无法跨语言，这应该是Java序列化最致命的问题，由于Java序列化是java内部私有的
+            协议，其他语言不支持，导致别的语言无法反序列化，这严重阻碍了它的应用。
+         2）序列化后的码流太大，java序列化的大小是二进制编码的5倍多。
+         3）序列化性能太低。
+
+      判断一个序列化框架的优缺点：
+         1）是否支持跨语言
+         2）编码后的码流
+         3）解编码的性能
+         5）类库是否小巧，API使用是否方便
+         6）使用者开发的工作量和难度        
+</pre>
+
+<pre>
+1) 如果你不需要很多语言相互调用， 希望保持清晰的java接口代码（无任何业务不相关的接口继承和
+   方法，属性定义），减少开发工作量，推荐Hessian
+2）如果系统间传输的数据量不是很大，推荐Hessian
+3) 如果需要支持大数据量的传输，多语言调用，极高的并发支持，推荐使用Thrift/ProtoBuf,
 </pre>
 
 <pre>
